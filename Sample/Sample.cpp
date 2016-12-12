@@ -74,10 +74,10 @@ struct CUSTOMVERTEX
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ | D3DFVF_TEX1)
 
 //使用するエフェクトのファイル名				=================================================== ※
-#define EFFECT_FIRE		"assets/炎.p3b"
-#define EFFECT_BOMB		"assets/爆発.p3b"
-#define EFFECT_MAGIC	"assets/魔方陣.p3b"
-#define EFFECT_BEAM		"assets/ビーム.p3b"
+#define EFFECT_FIRE		"assets/Fire.p3b"
+#define EFFECT_BOMB		"assets/Explosion.p3b"
+#define EFFECT_MAGIC	"assets/MagicCircle.p3b"
+#define EFFECT_BEAM		"assets/Beam.p3b"
 
 
 
