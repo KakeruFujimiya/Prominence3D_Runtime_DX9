@@ -1,0 +1,14 @@
+﻿2016/12/12 11:58:24 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\Endo\P3D_SDK\Sample\Sample.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Sample.cpp
+         Sample.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Endo\P3D_SDK\Sample\Debug\Sample.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Endo\P3D_SDK\Sample\Debug\Sample.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Endo\P3D_SDK\Sample\Debug\Sample.lib" /MACHINE:X86 Debug\Sample.obj
+            ライブラリ D:\Endo\P3D_SDK\Sample\Debug\Sample.lib とオブジェクト D:\Endo\P3D_SDK\Sample\Debug\Sample.exp を作成中
+         Sample.vcxproj -> D:\Endo\P3D_SDK\Sample\Debug\Sample.exe
+     1>プロジェクト "D:\Endo\P3D_SDK\Sample\Sample.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:01.04
