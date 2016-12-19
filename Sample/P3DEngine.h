@@ -24,7 +24,7 @@
 #include <vector>
 #include <list>
 #include <map>
-
+#include <string>
 
 
 namespace Prominence3D_SDK
@@ -49,9 +49,17 @@ namespace Prominence3D_SDK
 		//最小値は3、最大値は64です。
 		DWORD	polyDivisionNum;
 
+		//シェーダーファイル（P3DEngine.cfx）があるフォルダ
+		std::string shaderFilePath;
+		
+		//エフェクトファイルが保存してあるフォルダ
+		std::string effectFilePath;
+
+
 
 
 		/*** この設定項目は今後のバージョンアップで増える予定 ***/
+
 
 
 		//デフォルト値
@@ -59,6 +67,8 @@ namespace Prominence3D_SDK
 		{
 			pDevice = nullptr;
 			polyDivisionNum = 16;
+			shaderFilePath = "";
+			effectFilePath = "";
 		}
 	};
 
@@ -149,12 +159,13 @@ namespace Prominence3D_SDK
 
 
 	private:
-		std::map<LPCTSTR, P3DNode*>	_nodeMap;			//ロードしたファイル
+		std::map<std::string, P3DNode*>	_nodeMap;			//ロードしたファイル
 		std::list<P3DEffect*>		_particleManager;	//画面に表示されたエフェクト
 		std::vector<P3DPrimitive*>	_primitives;		//四角形や円柱などの基本図形
 
 		D3DXMATRIX	_matrixDir[7];	//6方向(+ランダム)分の回転行列	
 		LPD3DXEFFECT	_effect;	//シェーダー
+		std::string _filePath;		//エフェクトファイルのパス
 	};
 }
 

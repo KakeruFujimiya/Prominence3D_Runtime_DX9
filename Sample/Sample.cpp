@@ -41,7 +41,14 @@
 #pragma comment(lib, "d3d9.lib")
 #pragma comment(lib, "d3dx9.lib")
 #pragma comment(lib, "winmm.lib")
-#pragma comment(lib, "P3DEngine.lib")	//=================================================== ※
+
+//=================================================== ※
+#if _DEBUG								
+#pragma comment(lib, "P3DEngineD.lib")
+#else
+#pragma comment(lib, "P3DEngine.lib")
+#endif
+
 
 
 //-----------------------------------------------------------------------------
@@ -74,10 +81,10 @@ struct CUSTOMVERTEX
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ | D3DFVF_TEX1)
 
 //使用するエフェクトのファイル名				=================================================== ※
-#define EFFECT_FIRE		"assets/Fire.p3b"
-#define EFFECT_BOMB		"assets/Explosion.p3b"
-#define EFFECT_MAGIC	"assets/MagicCircle.p3b"
-#define EFFECT_BEAM		"assets/Beam.p3b"
+#define EFFECT_FIRE		"Fire.p3b"
+#define EFFECT_BOMB		"Explosion.p3b"
+#define EFFECT_MAGIC	"MagicCircle.p3b"
+#define EFFECT_BEAM		"Beam.p3b"
 
 
 
@@ -316,8 +323,10 @@ INT WINAPI wWinMain(HINSTANCE hInst, HINSTANCE, LPWSTR, INT)
 
 			//Prominence3Dランタイム初期化用構造体	========================================================== ※
 			P3DInitData data;
-			data.pDevice = pDevice;			//Direct3Dデバイスオブジェクト
-			data.polyDivisionNum = 64;
+			data.pDevice = pDevice;							//Direct3Dデバイスオブジェクト
+			data.polyDivisionNum = 64;						//円柱や球体の滑らかさ
+			data.shaderFilePath = "Assets";					//シェーダーファイル（P3DEngine.cfx）を入れたフォルダ
+			data.effectFilePath = "Assets\\EffectData";		//エフェクトのファイルを入れたフォルダ
 
 			//Prominence3Dランタイム本体を生成		========================================================== ※
 			pP3D = new P3DEngine(data);
