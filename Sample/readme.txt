@@ -9,7 +9,7 @@
 ■内容
 	Prominence3Dランタイムライブラリ（for DirectX9）を使って
 	3Dエフェクトを表示するサンプルプログラムです。
-	VisualStudio2017で作っています。
+	VisualStudio2013で作っています。
 
 
 ■プログラムの説明
